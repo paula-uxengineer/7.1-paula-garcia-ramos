@@ -1,0 +1,127 @@
+{
+    "info": {
+        "_postman_id": "1a1ba88a-4bb7-4a61-9c15-c59b4ddb226c",
+        "name": "7.1-API-documentation",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "Login",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "localhost:8080/api/login/",
+                    "path": [
+                        "api",
+                        "login"
+                    ],
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080"
+                },
+                "header": [
+                    {
+                        "key": "x-token",
+                        "value": "\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NjQzOGE4YmY3MDNmMjhkYmJhOTEzM2IiLCJpYXQiOjE3MTU3MDk1NTAsImV4cCI6MTcxNTc5NTk1MH0.3swpSqK1ujcvw0d1xVoV7ijfSXgEFp49X7hvbZ37-o4\""
+                    },
+                    {
+                        "key": "Accept",
+                        "value": "*/*",
+                        "disabled": true
+                    },
+                    {
+                        "key": "User-Agent",
+                        "value": "Thunder Client (https://www.thunderclient.com)",
+                        "disabled": true
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"email\": \"bird@test.com\",\n  \"password\": \"123456\"\n}"
+                }
+            }
+        },
+        {
+            "name": "Register",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "localhost:8080/api/login/new",
+                    "path": [
+                        "api",
+                        "login",
+                        "new"
+                    ],
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"nombre\": \"lala\",\n  \"password\": \"123456\",\n  \"email\": \"bird@test.com\"\n}"
+                }
+            }
+        },
+        {
+            "name": "Messages",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "localhost:8080/api/mensajes/665f71e5bb1d4332133fa85e",
+                    "path": [
+                        "api",
+                        "mensajes",
+                        "665f71e5bb1d4332133fa85e"
+                    ],
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080"
+                },
+                "header": [
+                    {
+                        "key": "x-token",
+                        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NjVmNzFlNWJiMWQ0MzMyMTMzZmE4NWUiLCJpYXQiOjE3MTc1MzExNTQsImV4cCI6MTcxNzYxNzU1NH0.TWr8IPnSTHO_rnYIeUs52_3MuS4lBp4YqlwHtzVlZe4"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Revalidar Token",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "localhost:8080/api/login/renew",
+                    "path": [
+                        "api",
+                        "login",
+                        "renew"
+                    ],
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080"
+                },
+                "header": [
+                    {
+                        "key": "x-token",
+                        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NjVmNzFlNWJiMWQ0MzMyMTMzZmE4NWUiLCJpYXQiOjE3MTc1MzExNTQsImV4cCI6MTcxNzYxNzU1NH0.TWr8IPnSTHO_rnYIeUs52_3MuS4lBp4YqlwHtzVlZe4"
+                    }
+                ]
+            }
+        }
+    ]
+}
