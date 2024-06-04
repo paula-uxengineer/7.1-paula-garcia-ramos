@@ -1,12 +1,18 @@
-version: '3.1'
-
+version: "3.9"
 services:
-  mongo:
+  mongodb:
+    container_name: sprint7
     image: mongo:latest
     restart: always
+    command:
+      - --storageEngine
+      - wiredTiger
+      - --auth
     environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: example
-
+      - MONGO_INITDB_ROOT_USERNAME=paula
+      - MONGO_INITDB_ROOT_PASSWORD=paula
+      - MONGO_INITDB_DATABASE=pauladb
     ports:
-      - 27017:27017
+      - "27017:27017"
+    volumes:
+      - ./mongodb-data:/data/db
